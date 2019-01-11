@@ -1,3 +1,4 @@
+"use strict";
 function say(name) {
     return "Hello, " + name;
 }

@@ -38,3 +38,9 @@ let c1: Color1 = Color1.Green;
 
 enum Color2 {Red = 1, Green = 2, Blue = 4}
 let c2: Color2 = Color2.Green;
+
+let colorName: string;
+colorName = Color2[3];
+console.log(colorName);         /* 输出：undefined。 */
+colorName = Color2[4];
+console.log(colorName);         /* 输出：Blue。 */
