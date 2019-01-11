@@ -1,3 +1,7 @@
+/**
+ * @author zhoujiaxin
+ * @version typescript V3.2.2
+ */
 // Boolean 布尔值
 let isDone: boolean = false;
 
@@ -6,7 +10,7 @@ let decimal: number = 6;
 let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: number = 0o744;
-
+    
 // String 字符串
 let color: string = "blue";                 /* 支持使用双引号( " )、单引号( ' )。 */
 color = 'red';
@@ -91,7 +95,8 @@ create(null);                       /* 空类型。 */
 // create(false);                   /* 编译错误，Boolean类型。 */
 // create(undefined);               /* 编译错误，undefined类型。 */
 
-// 类型断言，编译器特性
+// 类型断言（参考Java显式类型转换），编译器特性，即只在编译阶段起作用，不影响运行，
 let someValue: any = "this is a string";
-let strLength: number = (<string>someValue).length;
-let strLengthForAs: number = (someValue as string).length;
+let strLength: number = someValue.length;                           /* 编译通过，无语法提示。 */
+let strLengthForBrackets: number = (<string>someValue).length;      /* 尖括号写法。 */
+let strLengthForAs: number = (someValue as string).length;          /* as声明写法。 */
