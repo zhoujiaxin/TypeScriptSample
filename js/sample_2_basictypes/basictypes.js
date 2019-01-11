@@ -21,12 +21,12 @@ var listForGeneric = [1, 2, 3]; /* 泛型数组。 */
 var x; /* 元组类型声明。 */
 // Initialize it
 x = ['hello', 10]; /* 变量初始化。 */
-//x = [10, 'hello'];            /* 变量初始化失败示例。 */
+//x = [10, 'hello'];                        /* 变量初始化失败示例。 */
 console.log(x[0].substr(1)); /* 访问已知索引元素。 */
-//console.log(x[1].substr(1));  /* 错误，对应类型为Number，非String。 */
+//console.log(x[1].substr(1));              /* 错误，对应类型为Number，非String。 */
 // 与官网说明相反
-//x[3] = 'world';               /* 错误，Type '"world"' is not assignable to type 'undefined'. Property '3' does not exist on type '[string, number]'.*/
-//console.log(x[5].toString()); /* 错误, Object is possibly 'undefined'. Property '5' does not exist on type '[string, number]'.*/
+//x[3] = 'world';                           /* 错误，Type '"world"' is not assignable to type 'undefined'. Property '3' does not exist on type '[string, number]'.*/
+// console.log(x[5].toString());            /* 错误, Object is possibly 'undefined'. Property '5' does not exist on type '[string, number]'.*/
 // Enum 枚举，JavaScript标准数据类型的补充
 var Color1;
 (function (Color1) {
@@ -47,3 +47,13 @@ colorName = Color2[3];
 console.log(colorName); /* 输出：undefined。 */
 colorName = Color2[4];
 console.log(colorName); /* 输出：Blue。 */
+// Any，不希望类型检查器对这些值进行检查，而是直接让他们通过编译阶段。
+var notSure = 5; /* Any类型变量声明，并Number类型赋值。 */
+notSure.toFixed();
+notSure = "maybe a string insteaded"; /* String类型赋值。 */
+notSure = false; /* Boolean类型赋值。 */
+var prettySure = 5; /* 普通类型变量声明，并Number类型赋值。。 */
+// prettySure.toFixed();                    /* 编译阶段报错，Property 'toFixed' does not exist on type 'Object'。 */
+var anyList = [5, false, "TEST"];
+anyList[1] = true;
+console.log(anyList[1]);
