@@ -18,3 +18,4 @@ function createSquare(config: SquareConfig): { color: string; area: number } {
 }
 
 let mySquare = createSquare({ color: "black" });            /* width属性，去除?标识，显示错误 */
+console.log(mySquare.color);

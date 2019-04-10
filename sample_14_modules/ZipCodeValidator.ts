@@ -6,4 +6,4 @@ class ZipCodeValidator {
     }
 }
 export { ZipCodeValidator };
-export { ZipCodeValidator as mainValidator };
+export { ZipCodeValidator as MainValidator };
