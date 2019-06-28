@@ -6,6 +6,6 @@ function say(name:string) {
 	return "Hello, " + name;
 }
 
-let user = "Kungeek";
+let user = "Jack";
 
 document.body.innerHTML = say(user);

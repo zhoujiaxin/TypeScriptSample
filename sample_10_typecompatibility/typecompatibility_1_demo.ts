@@ -13,7 +13,7 @@ class TcPerson {
     constructor(name: string) {this.name = name}
 }
 
-let p: TcNamed = new TcPerson("Kungeek");           /* 结构一直，类型检查通过。 */
+let p: TcNamed = new TcPerson("Jack");           /* 结构一直，类型检查通过。 */
 
 // 适用
 

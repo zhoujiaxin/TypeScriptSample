@@ -3,7 +3,7 @@
 
 var simpleNP = (function(){})();
 
-var kungeek = (function(){
+var simpleNP1 = (function(){
 
     // 私有属性
     var _pluginName = "myPlugin";
@@ -37,9 +37,9 @@ var kungeek = (function(){
     return __NP;
 })();
 
-console.log(kungeek.name);                              /* 访问公共属性。 */
-kungeek.util.print();                                   /* 访问公共方法。 */
-var horse = new kungeek.model.Animal("Old horse");      /* 访问公共自定义类。 */
+console.log(simpleNP1.name);                              /* 访问公共属性。 */
+simpleNP1.util.print();                                   /* 访问公共方法。 */
+var horse = new simpleNP1.model.Animal("Old horse");      /* 访问公共自定义类。 */
 horse.sleep();
-// console.log(kungeek._pluginName);                    /* 访问私有属性，undefined */
-// kungeek._print();                                    /* 访问私有方法，kungeek._print is not a function */
+// console.log(simpleNP1._pluginName);                    /* 访问私有属性，undefined */
+// simpleNP1._print();                                    /* 访问私有方法，simpleNP1._print is not a function */

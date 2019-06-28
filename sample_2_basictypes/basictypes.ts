@@ -16,7 +16,7 @@ let color: string = "blue";                 /* 支持使用双引号( " )、单�
 color = 'red';
 
 // template strings 模板字符串
-let myName: string = 'Kungeek';             /* 反引号( ` )包围、表达式方式( ${expr} )引入。 */
+let myName: string = 'Jack';             /* 反引号( ` )包围、表达式方式( ${expr} )引入。 */
 let myAge: number = 25;
 let sentenceForTemplate: string = `Hello, my name is ${myName}.I'll be ${myAge+1} years old next month.`;
 let sentenceForSimple: string = "Hello, my name is " + myName + ".I'll be " + (myAge + 1) + " years old next month.";
